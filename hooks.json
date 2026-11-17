@@ -1,0 +1,32 @@
+{
+  "markdown-auto-fixer": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_file|edit_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hook-post-tool.cjs",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "safety-gate": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command|call_mcp_tool",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hook-pre-tool.cjs",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

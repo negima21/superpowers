@@ -1,0 +1,19 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=UTC 0 10 * * 1-5",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run an audit of documentation markdownlint quality and git workspace status, reporting any unresolved violations."
+  ],
+  "restart_policy": "always",
+  "display_name": "Dev-Master Daily Quality Audit",
+  "description": "Runs a scheduled audit of repository markdown quality and worktree integrity on weekday mornings.",
+  "agent_permissions": {
+    "access_grants": [
+      "command(git)",
+      "command(node)"
+    ]
+  }
+}

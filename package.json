@@ -4,6 +4,14 @@
   "description": "Superpowers skills and runtime bootstrap for coding agents",
   "type": "module",
   "main": ".opencode/plugins/superpowers.js",
+  "scripts": {
+    "lint": "node scripts/markdown-tool.cjs lint",
+    "fix": "node scripts/markdown-tool.cjs fix",
+    "audit": "node scripts/markdown-tool.cjs audit"
+  },
+  "dependencies": {
+    "markdownlint-cli2": "^0.17.2"
+  },
   "keywords": [
     "pi-package",
     "skills",
