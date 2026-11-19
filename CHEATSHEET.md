@@ -71,7 +71,7 @@ Choose the concurrency primitive by task shape:
 
 - **`invoke_subagent`**: 1–2 isolated ad-hoc delegations.
 - **`run_workflow`**: 3+ parallel items, staged pipelines (`phase()`, `pipeline()`), or JSON schema outputs.
-- **`/swarm`**: Long-lived peer workers collaborating via `@mentions` and isolated `share`/`branch` workspaces.
+- **`/swarm`**: Long-lived peer workers collaborating via `@mentions`, isolated `share`/`branch` workspaces, warm-context `fork`, sharded `tasks`/`n` pools, and topic `channels` (8+ workers). Workers follow the **Hybrid Hydrogen + Neon Policy** (`hydrogen-low` for mechanical/`monitor`/`narrator`, `hydrogen-medium`/`high` for standard implementation, `neon-medium`/`high`/`xhigh` for verifiers, architecture & deep debugging; never auto-assign weekly Argon or `flash`).
 
 ---
 

@@ -4,6 +4,7 @@
     "CRON_TZ=UTC 0 10 * * 1-5",
     "agentapi",
     "new-conversation",
+    "--model=gemini-4-hydrogen-medium",
     "--",
     "Run an audit of documentation markdownlint quality and git workspace status, reporting any unresolved violations."
   ],
